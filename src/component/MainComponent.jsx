@@ -37,7 +37,7 @@ export default function MainComponent() {
             <div className="container-fluid d-flex align-items-center justify-content-center" style={{ height: '100vh', backgroundColor: 'rgba(239, 108, 56, 1)' }}>
                 <div className="row align-self-center">
 
-                    <table class="table table-borderless">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -51,16 +51,17 @@ export default function MainComponent() {
                                 Object.entries(currRate).map(([currency, rate]) => (
                                     <tr key={currency}>
                                         <th>{currency}</th>
-                                        <td>{rate*105/100}</td>
+                                        <td>{rate * 105 / 100}</td>
                                         <td>{rate}</td>
-                                        <td>{rate*95/100}</td>
+                                        <td>{rate * 95 / 100}</td>
                                     </tr>
                                 ))
                             }
                         </tbody>
                     </table>
-                    <p>* Base Currency is USD</p>
-                    <p>* As for the API, https://currencyfreaks.com/ is used.</p>
+                    <div>
+                        <p className="text-white text-start">* Base Currency is USD <br />* As for the API, https://currencyfreaks.com/ is used.</p>
+                    </div>
                 </div>
             </div>
         </>
